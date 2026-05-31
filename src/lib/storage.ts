@@ -41,6 +41,11 @@ export function getLastNickname(): string | null {
     return localStorage.getItem(KEY_LAST_USER);
 }
 
+// Limpa o nickname atual do usuário, removendo-o do localStorage, mas mantendo o último nickname usado para referência futura
+export function clearNickname() {
+    localStorage.removeItem(KEY_USER);
+}
+
 // Limpa o nickname atual do usuário, mas mantém o último nickname usado para referência futura
 export function clearLastNickname() {
     localStorage.removeItem(KEY_LAST_USER);
